@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Orbitron", sans-serif;
+  --font-accent: "Space Grotesk", sans-serif;
+  
+  --color-pink: #ff00ff;
+  --color-blue: #00ffff;
+  --color-dark: #0A0A0A;
+}
+
+@layer base {
+  body {
+    @apply bg-dark text-white font-sans antialiased;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-display;
+  }
+}
+
+.glitch-static {
+  position: relative;
+  color: white;
+  display: inline-block;
+}
+
+.glitch-static::before,
+.glitch-static::after {
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+.glitch-static::before {
+  color: #ff00ff;
+  transform: translate(-3px, 0);
+}
+
+.glitch-static::after {
+  color: #00ffff;
+  transform: translate(3px, 0);
+}
+
+.glass-card {
+  @apply bg-white/5 backdrop-blur-lg border border-white/10 rounded-2xl;
+}
