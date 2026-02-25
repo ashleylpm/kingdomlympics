@@ -68,8 +68,6 @@ export default function App() {
         </p>
         <div className="flex justify-center space-x-6 text-white/40">
           <a href="#" className="hover:text-white transition-colors">Instagram</a>
-          <a href="#" className="hover:text-white transition-colors">YouTube</a>
-          <a href="#" className="hover:text-white transition-colors">Discord</a>
         </div>
       </footer>
     </div>
