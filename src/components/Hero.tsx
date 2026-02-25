@@ -4,7 +4,7 @@ import { Play, Trophy } from 'lucide-react';
 
 export const Hero: React.FC = () => {
   return (
-    <section className="relative min-h-[80vh] flex flex-col items-center justify-center text-center px-4 overflow-hidden">
+    <section id="home" className="relative min-h-[80vh] flex flex-col items-center justify-center text-center px-4 overflow-hidden">
       {/* Background Elements */}
       <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-pink/10 rounded-full blur-3xl animate-pulse" />
       <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-blue/10 rounded-full blur-3xl animate-pulse delay-700" />

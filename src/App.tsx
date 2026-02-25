@@ -23,15 +23,20 @@ export default function App() {
       {/* Navigation */}
       <nav className="fixed top-0 left-0 right-0 z-40 px-6 py-4 flex justify-between items-center bg-dark/80 backdrop-blur-md border-b border-white/5">
         <div className="font-display font-bold text-xl tracking-widest">
-          <span className="glitch-static text-sm md:text-xl" data-text="KINGDOMLYMPICS">KINGDOMLYMPICS</span>
+          <a href="#home" className="block">
+            <span className="glitch-static text-sm md:text-xl" data-text="KINGDOMLYMPICS">KINGDOMLYMPICS</span>
+          </a>
         </div>
         <div className="hidden md:flex space-x-8 text-xs font-bold uppercase tracking-widest text-white/60">
-          <a href="#" className="hover:text-white transition-colors">Home</a>
-          <a href="#" className="hover:text-white transition-colors">Details</a>
-          <a href="#" className="hover:text-white transition-colors">Leaderboard</a>
-          <a href="#" className="hover:text-white transition-colors">Register</a>
+          <a href="#home" className="hover:text-white transition-colors">Home</a>
+          <a href="#countdown" className="hover:text-white transition-colors">Countdown</a>
+          <a href="#details" className="hover:text-white transition-colors">Details</a>
+          <a href="#leaderboard" className="hover:text-white transition-colors">Leaderboard</a>
         </div>
-        <button className="px-5 py-2 rounded-full bg-white text-black text-xs font-bold uppercase tracking-widest hover:bg-pink transition-colors">
+        <button 
+          onClick={() => document.getElementById('details')?.scrollIntoView({ behavior: 'smooth' })}
+          className="px-5 py-2 rounded-full bg-white text-black text-xs font-bold uppercase tracking-widest hover:bg-pink transition-colors"
+        >
           Join Now
         </button>
       </nav>
@@ -45,9 +50,15 @@ export default function App() {
             <div className="w-px h-full bg-gradient-to-b from-transparent via-white/10 to-transparent" />
           </div>
           
-          <Countdown />
-          <EventDetails />
-          <LeaderboardPreview />
+          <section id="countdown">
+            <Countdown />
+          </section>
+          <section id="details">
+            <EventDetails />
+          </section>
+          <section id="leaderboard">
+            <LeaderboardPreview />
+          </section>
         </div>
       </main>
 
