@@ -3,6 +3,7 @@ import { Countdown } from './components/Countdown';
 import { EventDetails } from './components/EventDetails';
 import { LeaderboardPreview } from './components/LeaderboardPreview';
 import { motion, useScroll, useSpring } from 'motion/react';
+import { Divide } from 'lucide-react';
 
 export default function App() {
   const { scrollYProgress } = useScroll();
@@ -33,12 +34,23 @@ export default function App() {
           <a href="#details" className="hover:text-white transition-colors">Details</a>
           <a href="#leaderboard" className="hover:text-white transition-colors">Leaderboard</a>
         </div>
-        <button 
-          onClick={() => document.getElementById('details')?.scrollIntoView({ behavior: 'smooth' })}
-          className="px-5 py-2 rounded-full bg-white text-black text-xs font-bold uppercase tracking-widest hover:bg-pink transition-colors"
-        >
-          Join Now
-        </button>
+        
+        <div className="hidden md:flex space-x-2 text-xs font-bold uppercase tracking-widest text-white/60">
+          <button 
+            onClick={() => document.getElementById('home')?.scrollIntoView({ behavior: 'smooth' })}
+            className="px-5 py-2 rounded-full bg-white text-black text-xs font-bold uppercase tracking-widest hover:bg-blue transition-colors"
+          >
+            Help Out
+          </button>
+          <button 
+            onClick={() => document.getElementById('home')?.scrollIntoView({ behavior: 'smooth' })}
+            className="px-5 py-2 rounded-full bg-white text-black text-xs font-bold uppercase tracking-widest hover:bg-pink transition-colors"
+          >
+            Sign Up
+          </button>
+        </div>
+        
+        
       </nav>
 
       <main>
@@ -64,10 +76,10 @@ export default function App() {
 
       <footer className="py-12 px-4 border-t border-white/5 text-center">
         <p className="text-white/40 text-sm mb-8">
-          © 2026 DUMC NextGen. All rights reserved.
+          © 2026 NextGen DUMC. All rights reserved.
         </p>
         <div className="flex justify-center space-x-6 text-white/40">
-          <a href="#" className="hover:text-white transition-colors">Instagram</a>
+          <a href="https://www.instagram.com/nextgen.dumc/" className="hover:text-white transition-colors">Instagram</a>
         </div>
       </footer>
     </div>

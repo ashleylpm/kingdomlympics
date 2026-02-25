@@ -11,7 +11,7 @@ export const Hero: React.FC = () => {
 
   useEffect(() => {
     if (videoRef.current) {
-      videoRef.current.volume = 0.3; // 50%
+      videoRef.current.volume = 0.2; // 50%
     }
   }, []);
 
@@ -29,7 +29,7 @@ export const Hero: React.FC = () => {
       >
         <div className="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-white/5 border border-white/10 text-xs font-medium text-pink mb-6">
           <Trophy size={14} />
-          <span>DUMC NEXTGEN PRESENTS</span>
+          <span>NextGen DUMC PRESENTS</span>
         </div>
         
         <div className="max-w-2xl mx-auto mb-8">
