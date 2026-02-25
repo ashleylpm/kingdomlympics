@@ -22,7 +22,7 @@ export const Hero: React.FC = () => {
         
         <div className="max-w-2xl mx-auto mb-8">
           <img 
-            src="/logo.png" 
+            src="/logo (1).png" 
             alt="KINGDOMLYMPICS" 
             className="w-full h-auto object-contain"
             onError={(e) => {

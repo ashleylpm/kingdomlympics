@@ -66,9 +66,8 @@ export const Countdown: React.FC = () => {
   return (
     <div className="py-12">
 
-      <div className="text-center mt-6">
-        <h2 className="text-3xl font-bold mb-4">Countdown to KINGDOMLYMPICS 2026</h2>
-        {/* <p className="text-sm text-white/60">Countdown to KINGDOMLYMPICS 2026</p> */}
+      <div className="text-center mt-24">
+        <h2 className="text-3xl font-bold mb-4">Countdown to <span className="glitch-static" data-text="KINGDOMLYMPICS 2026">KINGDOMLYMPICS 2026</span></h2>
       </div>
 
       <div className="flex justify-center items-center space-x-2 md:space-x-8">

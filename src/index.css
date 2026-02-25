@@ -40,12 +40,12 @@
 
 .glitch-static::before {
   color: #ff00ff;
-  transform: translate(-3px, 0);
+  transform: translate(-2px, 0);
 }
 
 .glitch-static::after {
   color: #00ffff;
-  transform: translate(3px, 0);
+  transform: translate(2px, 0);
 }
 
 .glass-card {
