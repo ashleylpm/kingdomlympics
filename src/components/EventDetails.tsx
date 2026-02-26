@@ -26,8 +26,8 @@ export const EventDetails: React.FC = () => {
   ];
 
   return (
-    <section className="py-12 px-4 max-w-6xl mx-auto">
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+    <section className="py-6 md:py-12 px-4 max-w-6xl mx-auto">
+      <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
         {details.map((item, index) => (
           <div key={index} className="glass-card p-8 flex flex-col items-center text-center group hover:border-white/20 transition-colors">
             <div className="mb-4 p-3 rounded-2xl bg-white/5 group-hover:scale-110 transition-transform">

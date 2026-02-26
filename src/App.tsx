@@ -1,7 +1,7 @@
 import { Hero } from './components/Hero';
 import { Countdown } from './components/Countdown';
 import { Description } from './components/Description';
-import { Calendar } from './components/Calendar';
+import { Timeline } from './components/Timeline';
 import { EventDetails } from './components/EventDetails';
 import { LeaderboardPreview } from './components/LeaderboardPreview';
 import { motion, useScroll, useSpring } from 'motion/react';
@@ -33,19 +33,19 @@ export default function App() {
           <a href="#home" className="hover:text-white transition-colors">Home</a>
           <a href="#countdown" className="hover:text-white transition-colors">Countdown</a>
           <a href="#about" className="hover:text-white transition-colors">About</a>
-          <a href="#calendar" className="hover:text-white transition-colors">Calendar</a>
+          <a href="#timeline" className="hover:text-white transition-colors">Timeline</a>
         </div>
         
-        <div className="hidden md:flex space-x-2 text-xs font-bold uppercase tracking-widest text-white/60">
+        <div className="flex space-x-2 text-xs font-bold uppercase tracking-widest text-white/60">
           <button 
             onClick={() => document.getElementById('home')?.scrollIntoView({ behavior: 'smooth' })}
-            className="px-5 py-2 rounded-full bg-white text-black text-xs font-bold uppercase tracking-widest hover:bg-blue transition-colors"
+            className="px-3 md:px-5 py-2 rounded-full bg-white text-black text-xs font-bold uppercase tracking-widest hover:bg-blue transition-colors"
           >
             Help Out
           </button>
           <button 
             onClick={() => document.getElementById('home')?.scrollIntoView({ behavior: 'smooth' })}
-            className="px-5 py-2 rounded-full bg-white text-black text-xs font-bold uppercase tracking-widest hover:bg-pink transition-colors"
+            className="px-3 md:px-5 py-2 rounded-full bg-white text-black text-xs font-bold uppercase tracking-widest hover:bg-pink transition-colors"
           >
             Sign Up
           </button>
@@ -72,8 +72,8 @@ export default function App() {
           <section id="details">
             <EventDetails />
           </section>
-          <section id="calendar">
-            <Calendar />
+          <section id="timeline">
+            <Timeline />
           </section>
           <section id="leaderboard">
             <LeaderboardPreview />

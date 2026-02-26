@@ -1,8 +1,8 @@
 import React from 'react';
 import { motion } from 'motion/react';
-import { Calendar as CalendarIcon, Trophy } from 'lucide-react';
+import { Calendar, Clock, Crown } from 'lucide-react';
 
-export const Calendar: React.FC = () => {
+export const Timeline: React.FC = () => {
   const keyEvents = [
     {
       date: "28",
@@ -43,7 +43,7 @@ export const Calendar: React.FC = () => {
   ];
 
   return (
-    <section className="py-24 px-4 max-w-6xl mx-auto">
+    <section className="py-12 md:py-18 px-4 max-w-6xl mx-auto">
       <motion.div
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -52,8 +52,8 @@ export const Calendar: React.FC = () => {
         className="text-center mb-16"
       >
         <div className="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-white/5 border border-white/10 text-xs font-medium text-blue mb-6">
-          <CalendarIcon size={14} />
-          <span>KEY EVENTS</span>
+          <Calendar size={14} />
+          <span>TIMELINE</span>
         </div>
         
         <h2 className="text-4xl md:text-6xl font-black font-display mb-8 bg-gradient-to-r from-blue to-pink bg-clip-text text-transparent">
@@ -82,13 +82,13 @@ export const Calendar: React.FC = () => {
             }`}
           >
             {/* Timeline Dot */}
-            <div className={`absolute left-6 md:left-1/2 w-6 h-6 rounded-full border-2 transform md:-translate-x-1/2 z-10 ${
+            <div className={`absolute left-6 md:left-1/2 w-7 h-7 rounded-full border-2 transform md:-translate-x-1/2 z-10 ${
               event.isFinale 
-                ? 'bg-gradient-to-r from-pink to-blue border-white' 
+                ? 'bg-gradient-to-r from-pink to-blue border-white shadow-lg shadow-pink/50' 
                 : 'bg-blue border-blue'
             }`}>
               {event.isFinale && (
-                <Trophy size={12} className="text-white absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2" />
+                <Crown size={18} className="text-white drop-shadow-sm absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2" />
               )}
             </div>
             

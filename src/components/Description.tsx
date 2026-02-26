@@ -4,7 +4,7 @@ import { motion } from 'motion/react';
 export const Description: React.FC = () => {
 
   return (
-    <section className="py-24 px-4 max-w-6xl mx-auto">
+    <section className="py-12 md:py-18 px-4 max-w-6xl mx-auto">
       <motion.div
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -31,7 +31,7 @@ export const Description: React.FC = () => {
           
           <div className="glass-card p-6 mb-8">
             <p className="text-base md:text-lg text-white/90">
-              🏆 The <strong className="text-blue">2025 Champions, 10th Gen Saintz</strong>, proved that teamwork wins the day.
+              🏆 The <strong className="text-blue">2025 Champions, 10th Gen Saintz</strong> proved that teamwork wins the day.
             </p>
           </div>
           
