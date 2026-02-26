@@ -11,7 +11,7 @@ export const EventDetails: React.FC = () => {
     {
       icon: <Clock className="text-pink" />,
       label: "Time",
-      value: "9:00 AM - 5:00 PM"
+      value: "3:00 PM - 8:00 PM"
     },
     {
       icon: <MapPin className="text-pink" />,
