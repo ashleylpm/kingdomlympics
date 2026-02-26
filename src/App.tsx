@@ -1,9 +1,10 @@
 import { Hero } from './components/Hero';
 import { Countdown } from './components/Countdown';
+import { Description } from './components/Description';
+import { Calendar } from './components/Calendar';
 import { EventDetails } from './components/EventDetails';
 import { LeaderboardPreview } from './components/LeaderboardPreview';
 import { motion, useScroll, useSpring } from 'motion/react';
-import { Divide } from 'lucide-react';
 
 export default function App() {
   const { scrollYProgress } = useScroll();
@@ -31,8 +32,8 @@ export default function App() {
         <div className="hidden md:flex space-x-8 text-xs font-bold uppercase tracking-widest text-white/60">
           <a href="#home" className="hover:text-white transition-colors">Home</a>
           <a href="#countdown" className="hover:text-white transition-colors">Countdown</a>
-          <a href="#details" className="hover:text-white transition-colors">Details</a>
-          <a href="#leaderboard" className="hover:text-white transition-colors">Leaderboard</a>
+          <a href="#about" className="hover:text-white transition-colors">About</a>
+          <a href="#calendar" className="hover:text-white transition-colors">Calendar</a>
         </div>
         
         <div className="hidden md:flex space-x-2 text-xs font-bold uppercase tracking-widest text-white/60">
@@ -65,8 +66,14 @@ export default function App() {
           <section id="countdown">
             <Countdown />
           </section>
+          <section id="about">
+            <Description />
+          </section>
           <section id="details">
             <EventDetails />
+          </section>
+          <section id="calendar">
+            <Calendar />
           </section>
           <section id="leaderboard">
             <LeaderboardPreview />
