@@ -36,20 +36,20 @@ export default function App() {
           <a href="#timeline" className="hover:text-white transition-colors">Timeline</a>
         </div>
         
-        <div className="flex space-x-2 text-xs font-bold uppercase tracking-widest text-white/60">
-          <button 
+{/* <div className="flex space-x-2 text-xs font-bold uppercase tracking-widest text-white/60">
+          <button
             onClick={() => document.getElementById('home')?.scrollIntoView({ behavior: 'smooth' })}
             className="px-3 md:px-5 py-2 rounded-full bg-white text-black text-xs font-bold uppercase tracking-widest hover:bg-blue transition-colors"
           >
             Help Out
           </button>
-          <button 
+          <button
             onClick={() => document.getElementById('home')?.scrollIntoView({ behavior: 'smooth' })}
             className="px-3 md:px-5 py-2 rounded-full bg-white text-black text-xs font-bold uppercase tracking-widest hover:bg-pink transition-colors"
           >
             Sign Up
           </button>
-        </div>
+        </div> */}
         
         
       </nav>
@@ -58,11 +58,6 @@ export default function App() {
         <Hero />
         
         <div className="relative">
-          {/* Section Divider */}
-          <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
-            <div className="w-px h-full bg-gradient-to-b from-transparent via-white/10 to-transparent" />
-          </div>
-          
           <section id="countdown">
             <Countdown />
           </section>
