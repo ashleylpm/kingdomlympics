@@ -5,33 +5,27 @@ import { Calendar, Clock, Crown } from 'lucide-react';
 export const Timeline: React.FC = () => {
   const keyEvents = [
     {
-      date: "28",
-      month: "MAR",
-      title: "Challenge 1",
-      isFinale: false
-    },
-    {
       date: "25", 
       month: "APR",
-      title: "Challenge 2",
+      title: "Challenge 1",
       isFinale: false
     },
     {
       date: "30",
       month: "MAY",
-      title: "Challenge 3", 
+      title: "Challenge 2", 
       isFinale: false
     },
     {
       date: "27",
       month: "JUN",
-      title: "Challenge 4",
+      title: "Challenge 3",
       isFinale: false
     },
     {
       date: "25",
       month: "JUL",
-      title: "Challenge 5",
+      title: "Challenge 4",
       isFinale: false
     },
     {
@@ -68,7 +62,7 @@ export const Timeline: React.FC = () => {
       {/* Vertical Timeline */}
       <div className="relative max-w-4xl mx-auto">
         {/* Timeline Line */}
-        <div className="absolute left-8 md:left-1/2 top-0 bottom-0 w-0.5 bg-gradient-to-b from-blue via-pink to-blue opacity-30 transform md:-translate-x-px"></div>
+        <div className="absolute left-[2.375rem] md:left-1/2 top-0 bottom-0 w-0.5 bg-gradient-to-b from-blue via-pink to-blue opacity-30 transform md:-translate-x-px"></div>
         
         {keyEvents.map((event, index) => (
           <motion.div
