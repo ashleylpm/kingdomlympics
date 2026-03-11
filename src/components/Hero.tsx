@@ -42,10 +42,6 @@ export const Hero: React.FC = () => {
             }}
           />
         </div>
-        
-        <p className="max-w-xl mx-auto text-lg md:text-xl text-white/60 mb-12 font-light">
-          Come join the fun and bring your squad along!
-        </p>
 
         {/* Recap Video */}
         <motion.div 

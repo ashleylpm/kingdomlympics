@@ -55,7 +55,7 @@ export const Timeline: React.FC = () => {
         </h2>
 
         <p className="text-lg md:text-xl text-white/60 max-w-2xl mx-auto">
-          Five epic events leading to our ultimate showdown. Don't miss a single moment!
+          Four epic challenges, one grand finale. Don't miss a single moment! Come join the fun and bring your squad along!
         </p>
       </motion.div>
 
