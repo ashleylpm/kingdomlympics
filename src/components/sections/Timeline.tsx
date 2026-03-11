@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'motion/react';
 import { Calendar, Crown } from 'lucide-react';
+import { Badge } from '../ui/Badge';
 
 export const Timeline: React.FC = () => {
   const keyEvents = [
@@ -45,10 +46,9 @@ export const Timeline: React.FC = () => {
         transition={{ duration: 0.8 }}
         className="text-center mb-16"
       >
-        <div className="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-white/5 border border-white/10 text-xs font-medium text-blue mb-6">
-          <Calendar size={14} />
-          <span>TIMELINE</span>
-        </div>
+        <Badge icon={<Calendar size={14} />} className="mb-6">
+          TIMELINE
+        </Badge>
 
         <h2 className="text-4xl md:text-6xl font-black font-display mb-8 bg-gradient-to-r from-blue to-pink bg-clip-text text-transparent">
           Mark Your Calendar

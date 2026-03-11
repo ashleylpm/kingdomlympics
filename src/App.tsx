@@ -1,9 +1,9 @@
-import { Hero } from './components/Hero';
-import { Countdown } from './components/Countdown';
-import { Description } from './components/Description';
-import { Timeline } from './components/Timeline';
-import { EventDetails } from './components/EventDetails';
-import { LeaderboardPreview } from './components/LeaderboardPreview';
+import { Hero } from './components/sections/Hero';
+import { Countdown } from './components/sections/Countdown';
+import { Description } from './components/sections/Description';
+import { Timeline } from './components/sections/Timeline';
+import { EventDetails } from './components/sections/EventDetails';
+import { LeaderboardPreview } from './components/sections/LeaderboardPreview';
 import { motion, useScroll, useSpring } from 'motion/react';
 
 export default function App() {

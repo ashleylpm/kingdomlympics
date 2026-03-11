@@ -1,6 +1,7 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { motion } from 'motion/react';
-import { Play, Trophy } from 'lucide-react';
+import { Trophy } from 'lucide-react';
+import { Badge } from '../ui/Badge';
 import recapVid from "/recap.mp4";
 
 
@@ -16,7 +17,7 @@ export const Hero: React.FC = () => {
   }, []);
 
   return (
-    <section id="home" className="relative min-h-[80vh] flex flex-col items-center justify-center text-center px-4 overflow-hidden">
+    <section id="home" className="relative min-h-[80vh] flex flex-col items-center justify-center text-center px-4 pt-20 overflow-hidden">
       {/* Background Elements */}
       <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-pink/10 rounded-full blur-3xl animate-pulse" />
       <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-blue/10 rounded-full blur-3xl animate-pulse delay-700" />
@@ -27,10 +28,9 @@ export const Hero: React.FC = () => {
         transition={{ duration: 0.8 }}
         className="z-10"
       >
-        <div className="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-white/5 border border-white/10 text-xs font-medium text-pink mb-6">
-          <Trophy size={14} />
-          <span>NextGen DUMC PRESENTS</span>
-        </div>
+        <Badge icon={<Trophy size={14} />} className="mb-6">
+          NextGen DUMC PRESENTS
+        </Badge>
         
         <div className="max-w-2xl mx-auto mb-8">
           <img 

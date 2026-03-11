@@ -1,5 +1,7 @@
 import React from 'react';
 import { motion } from 'motion/react';
+import { HelpCircle } from 'lucide-react';
+import { Badge } from '../ui/Badge';
 
 export const Description: React.FC = () => {
 
@@ -12,9 +14,9 @@ export const Description: React.FC = () => {
         transition={{ duration: 0.8 }}
         className="text-center mb-16"
       >
-        <div className="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-white/5 border border-white/10 text-xs font-medium text-pink mb-6">
-          <span>WHAT IS KINGDOMLYMPICS?</span>
-        </div>
+        <Badge icon={<HelpCircle size={14} />} className="mb-6">
+          WHAT IS KINGDOMLYMPICS?
+        </Badge>
         
         <h2 className="text-4xl md:text-6xl font-black font-display mb-8 bg-gradient-to-r from-pink to-blue bg-clip-text text-transparent">
           More Than Competition

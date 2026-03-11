@@ -55,3 +55,7 @@
 .glass-card {
   @apply bg-white/5 backdrop-blur-lg border border-white/10 rounded-2xl;
 }
+
+.gradient-box {
+  @apply bg-gradient-to-br from-pink/15 to-blue/15 border border-pink/40 hover:border-pink/60 shadow-lg shadow-pink/20;
+}
