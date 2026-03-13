@@ -30,7 +30,7 @@ export const Timeline: React.FC = () => {
       isFinale: false
     },
     {
-      date: "30",
+      date: "23",
       month: "AUG",
       title: "GRAND FINALE",
       isFinale: true

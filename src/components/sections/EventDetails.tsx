@@ -6,7 +6,7 @@ export const EventDetails: React.FC = () => {
     {
       icon: <Calendar className="text-pink" />,
       label: "Date",
-      value: "30th August 2026"
+      value: "23rd August 2026"
     },
     {
       icon: <Clock className="text-pink" />,

@@ -3,7 +3,7 @@ import { intervalToDuration, type Duration } from 'date-fns';
 import { motion } from 'motion/react';
 
 // Create event date more explicitly for Malaysia timezone
-const EVENT_DATE = new Date(2026, 7, 30, 9, 0, 0); // Month is 0-indexed, so 7 = August
+const EVENT_DATE = new Date(2026, 7, 23, 9, 0, 0); // Month is 0-indexed, so 7 = August
 
 export const Countdown: React.FC = () => {
   const [duration, setDuration] = useState<Duration | null>(null);

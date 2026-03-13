@@ -28,7 +28,7 @@ export const Description: React.FC = () => {
           </p>
           
           <p className="text-lg md:text-xl text-white/80 leading-relaxed mb-8">
-            Whether you've been here for years or are stepping in for the very first time, <strong className="text-pink">your CG needs you</strong>. Every point counts, every newcomer strengthens the team, and everything culminates in our massive Grand Finale on August 30.
+            Whether you've been here for years or are stepping in for the very first time, <strong className="text-pink">your CG needs you</strong>. Every point counts, every newcomer strengthens the team, and everything culminates in our massive Grand Finale on August 23.
           </p>
           
           <div className="glass-card p-6 mb-8">
