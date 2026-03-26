@@ -56,7 +56,7 @@ export const Timeline: React.FC = () => {
           TIMELINE
         </Badge>
 
-        <h2 className="text-2xl md:text-4xl font-display mb-8 leading-relaxed">
+        <h2 className="text-2xl md:text-4xl mb-8 leading-relaxed">
           <span className="pixel-text">Mark Your Calendar</span>
         </h2>
 
@@ -87,14 +87,14 @@ export const Timeline: React.FC = () => {
                 <Icon icon="pixelarticons:crown" width={32} className="text-pixel-gold drop-shadow-[0_0_8px_rgba(255,215,0,0.6)]" />
               </div>
             ) : (
-              <div className="absolute left-6 md:left-1/2 w-7 h-7 border-3 bg-blue border-blue transform md:-translate-x-1/2 z-10" />
+              <div className="absolute left-6 md:left-1/2 w-7 h-7 border-2 bg-blue border-blue transform md:-translate-x-1/2 z-10" />
             )}
 
             {/* Content */}
             <div className={`w-full md:w-5/12 ml-16 md:ml-0 ${
               index % 2 === 0 ? 'md:pr-8 md:text-right' : 'md:pl-8'
             }`}>
-              <div className={`p-6 border-3 transition-all ${
+              <div className={`p-6 transition-all ${
                 event.isFinale
                   ? 'pixel-card gradient-box pink-corners'
                   : 'pixel-card'

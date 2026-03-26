@@ -6,10 +6,10 @@ export const LeaderboardPreview: React.FC = () => {
   return (
     <section className="py-24 px-4 max-w-4xl mx-auto text-center">
       <div className="pixel-card p-12 border-dashed border-2 border-white/10 opacity-50">
-        <div className="inline-flex items-center justify-center w-16 h-16 border-3 border-blue/30 mb-6">
+        <div className="inline-flex items-center justify-center w-16 h-16 border-2 border-blue/30 mb-6">
           <Icon icon="pixelarticons:lock" width={24} className="text-blue/40" />
         </div>
-        <h2 className="text-xl md:text-2xl font-display mb-4">Leaderboard</h2>
+        <h2 className="text-xl md:text-2xl mb-4">Leaderboard</h2>
         <p className="text-white/40 text-sm max-w-md mx-auto">
           The arena is being prepared. Team standings and live scores will be available once the games begin.
         </p>
@@ -22,10 +22,10 @@ export const LeaderboardPreview: React.FC = () => {
       </div>
       {/* Use this when unlocking the leaderboard to new page*/}
       {/* <div className="pixel-card p-12">
-        <div className="inline-flex items-center justify-center w-16 h-16 bg-pixel-gold border-3 border-yellow-600 mb-6">
+        <div className="inline-flex items-center justify-center w-16 h-16 bg-pixel-gold border-2 border-yellow-600 mb-6">
           <Icon icon="pixelarticons:trophy" width={24} className="text-black" />
         </div>
-        <h2 className="text-xl md:text-2xl font-display mb-4">Leaderboard</h2>
+        <h2 className="text-xl md:text-2xl mb-4">Leaderboard</h2>
         <p className="text-white/40 text-sm max-w-md mx-auto">
           Check out the live standings and see which team is leading the competition.
         </p>

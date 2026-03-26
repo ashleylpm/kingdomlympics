@@ -18,7 +18,7 @@ export const Description: React.FC = () => {
           WHAT IS KINGDOMLYMPICS?
         </Badge>
 
-        <h2 className="text-2xl md:text-4xl font-display mb-8 leading-relaxed">
+        <h2 className="text-2xl md:text-4xl mb-8 leading-relaxed">
           <span className="pixel-text">More Than Competition</span>
         </h2>
 

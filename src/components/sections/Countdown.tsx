@@ -45,8 +45,8 @@ export const Countdown: React.FC = () => {
 
   return (
     <div className="py-12">
-      <div className="text-center mt-24 mb-8">
-        <h2 className="text-lg md:text-2xl font-display font-bold mb-4 leading-relaxed">
+      <div className="text-center mt-18 mb-8">
+        <h2 className="text-lg md:text-2xl font-bold mb-4 leading-relaxed">
           Countdown to{' '}
           <span className="pixel-text text-lg md:text-2xl">KINGDOMLYMPICS 2026</span>
         </h2>
