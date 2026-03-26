@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'motion/react';
-import { Calendar, Crown } from 'lucide-react';
+import { Icon } from '@iconify/react';
 import { Badge } from '../ui/Badge';
 
 export const Timeline: React.FC = () => {
@@ -8,25 +8,25 @@ export const Timeline: React.FC = () => {
     {
       date: "25",
       month: "APR",
-      title: "Challenge 1",
+      title: "Battle Game 1",
       isFinale: false
     },
     {
       date: "30",
       month: "MAY",
-      title: "Challenge 2",
+      title: "Battle Game 2",
       isFinale: false
     },
     {
       date: "27",
       month: "JUN",
-      title: "Challenge 3",
+      title: "Battle Game 3",
       isFinale: false
     },
     {
       date: "25",
       month: "JUL",
-      title: "Challenge 4",
+      title: "Battle Game 4",
       isFinale: false
     },
     {
@@ -38,7 +38,13 @@ export const Timeline: React.FC = () => {
   ];
 
   return (
-    <section className="py-12 md:py-18 px-4 max-w-6xl mx-auto">
+    <section className="py-12 md:py-18 px-4 max-w-6xl mx-auto relative overflow-hidden">
+      {/* Pixel squares */}
+      <div className="absolute top-[10%] right-[4%] w-3 h-3 bg-pink opacity-18 animate-pulse" style={{ animationDuration: '2.8s' }} />
+      <div className="absolute top-[35%] left-[3%] w-2 h-2 bg-blue opacity-20 animate-pulse" style={{ animationDuration: '3.4s', animationDelay: '0.5s' }} />
+      <div className="absolute top-[60%] right-[5%] w-3 h-3 bg-cyan-300 opacity-15 animate-pulse" style={{ animationDuration: '3.9s', animationDelay: '1.1s' }} />
+      <div className="absolute top-[85%] left-[4%] w-2 h-2 bg-pink opacity-20 animate-pulse" style={{ animationDuration: '2.6s', animationDelay: '0.7s' }} />
+      <div className="absolute top-[50%] right-[3%] w-2 h-2 bg-violet-400 opacity-15 animate-pulse" style={{ animationDuration: '4.1s', animationDelay: '1.4s' }} />
       <motion.div
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -46,23 +52,23 @@ export const Timeline: React.FC = () => {
         transition={{ duration: 0.8 }}
         className="text-center mb-16"
       >
-        <Badge icon={<Calendar size={14} />} className="mb-6">
+        <Badge icon={<Icon icon="pixelarticons:calendar" width={14} />} className="mb-6">
           TIMELINE
         </Badge>
 
-        <h2 className="text-4xl md:text-6xl font-black font-display mb-8 bg-gradient-to-r from-blue to-pink bg-clip-text text-transparent">
-          Mark Your Calendar
+        <h2 className="text-2xl md:text-4xl font-display mb-8 leading-relaxed">
+          <span className="pixel-text">Mark Your Calendar</span>
         </h2>
 
-        <p className="text-lg md:text-xl text-white/60 max-w-2xl mx-auto">
-          Four epic challenges, one grand finale. Don't miss a single moment! Come join the fun and bring your squad along!
+        <p className="text-sm md:text-base text-white/60 max-w-2xl mx-auto">
+          Four epic battle games, one grand finale. Don't miss a single moment! Come join the fun and bring your squad along!
         </p>
       </motion.div>
 
       {/* Vertical Timeline */}
       <div className="relative max-w-4xl mx-auto">
-        {/* Timeline Line */}
-        <div className="absolute left-[2.375rem] md:left-1/2 top-0 bottom-0 w-0.5 bg-gradient-to-b from-blue via-pink to-blue opacity-30 transform md:-translate-x-px"></div>
+        {/* Timeline Line - pixelated dashed */}
+        <div className="absolute left-[calc(2.375rem-2px)] md:left-1/2 top-0 bottom-0 w-0 border-l-4 border-dashed border-blue/30 transform md:-translate-x-[2px]"></div>
 
         {keyEvents.map((event, index) => (
           <motion.div
@@ -75,42 +81,40 @@ export const Timeline: React.FC = () => {
               index % 2 === 0 ? 'md:flex-row-reverse' : ''
             }`}
           >
-            {/* Timeline Dot */}
-            <div className={`absolute left-6 md:left-1/2 w-7 h-7 rounded-full border-2 transform md:-translate-x-1/2 z-10 ${
-              event.isFinale
-                ? 'bg-gradient-to-r from-pink to-blue border-white shadow-lg shadow-pink/50'
-                : 'bg-blue border-blue'
-            }`}>
-              {event.isFinale && (
-                <Crown size={18} className="text-white drop-shadow-sm absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2" />
-              )}
-            </div>
+            {/* Timeline Dot - pixel square */}
+            {event.isFinale ? (
+              <div className="absolute left-[calc(2.375rem-20px)] md:left-1/2 transform md:-translate-x-1/2 z-10 bg-dark p-1">
+                <Icon icon="pixelarticons:crown" width={32} className="text-pixel-gold drop-shadow-[0_0_8px_rgba(255,215,0,0.6)]" />
+              </div>
+            ) : (
+              <div className="absolute left-6 md:left-1/2 w-7 h-7 border-3 bg-blue border-blue transform md:-translate-x-1/2 z-10" />
+            )}
 
             {/* Content */}
             <div className={`w-full md:w-5/12 ml-16 md:ml-0 ${
               index % 2 === 0 ? 'md:pr-8 md:text-right' : 'md:pl-8'
             }`}>
-              <div className={`backdrop-blur-sm rounded-2xl p-6 border transition-all ${
+              <div className={`p-6 border-3 transition-all ${
                 event.isFinale
-                  ? 'bg-gradient-to-br from-pink/15 to-blue/15 border-pink/40 hover:border-pink/60 shadow-lg shadow-pink/20'
-                  : 'bg-white/5 border-white/10 hover:border-white/20'
+                  ? 'pixel-card gradient-box pink-corners'
+                  : 'pixel-card'
               }`}>
                 <div className={`flex items-center gap-4 mb-3 ${
                   index % 2 === 0 ? 'md:justify-end' : ''
                 }`}>
                   <div className="text-center">
-                    <div className={`text-3xl font-black text-white`}>
+                    <div className="text-2xl md:text-3xl font-display text-white">
                       {event.date}
                     </div>
-                    <div className="text-xs font-bold text-white/60 uppercase tracking-widest">
+                    <div className="text-[8px] font-display text-white/60 uppercase tracking-widest">
                       {event.month}
                     </div>
                   </div>
                 </div>
 
-                <h3 className={`text-xl font-bold uppercase tracking-wide ${
+                <h3 className={`text-sm md:text-base font-display uppercase tracking-wide ${
                   event.isFinale
-                    ? 'text-transparent bg-gradient-to-r from-pink to-blue bg-clip-text'
+                    ? 'text-pink'
                     : 'text-white'
                 }`}>
                   {event.title}
