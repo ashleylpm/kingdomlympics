@@ -52,11 +52,11 @@ export default function App() {
           <section id="about">
             <Description />
           </section>
-          <section id="details">
-            <EventDetails />
-          </section>
           <section id="timeline">
             <Timeline />
+          </section>
+          <section id="details">
+            <EventDetails />
           </section>
           <section id="countdown">
             <Countdown />
