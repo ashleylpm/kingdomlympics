@@ -63,7 +63,7 @@ export const Timeline: React.FC = () => {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: index * 0.1 }}
-            className={`relative flex items-center mb-12 ${
+            className={`relative flex items-center ${index < keyEvents.length - 1 ? 'mb-12' : ''} ${
               index % 2 === 0 ? 'md:flex-row-reverse' : ''
             }`}
           >
