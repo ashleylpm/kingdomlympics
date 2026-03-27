@@ -31,9 +31,9 @@ export default function App() {
         </div>
         <div className="hidden md:flex space-x-8 text-[10px] font-bold uppercase tracking-widest text-white/60">
           <a href="#home" className="hover:text-blue transition-none hover:underline decoration-4 underline-offset-4">Home</a>
-          <a href="#countdown" className="hover:text-blue transition-none hover:underline decoration-4 underline-offset-4">Countdown</a>
           <a href="#about" className="hover:text-blue transition-none hover:underline decoration-4 underline-offset-4">About</a>
           <a href="#timeline" className="hover:text-blue transition-none hover:underline decoration-4 underline-offset-4">Timeline</a>
+          <a href="#countdown" className="hover:text-blue transition-none hover:underline decoration-4 underline-offset-4">Countdown</a>
         </div>
       </nav>
 
