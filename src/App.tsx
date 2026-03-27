@@ -42,12 +42,12 @@ export default function App() {
 
         <div className="relative overflow-hidden">
           {/* Scattered pixel squares */}
-          <div className="absolute top-[8%] left-[3%] w-3 h-3 bg-pink opacity-15 animate-pulse" style={{ animationDuration: '3.2s' }} />
-          <div className="absolute top-[22%] right-[4%] w-2 h-2 bg-blue opacity-20 animate-pulse" style={{ animationDuration: '2.6s', animationDelay: '0.8s' }} />
-          <div className="absolute top-[45%] left-[5%] w-4 h-4 bg-cyan-400 opacity-12 animate-pulse" style={{ animationDuration: '3.8s', animationDelay: '1.2s' }} />
-          <div className="absolute top-[60%] right-[3%] w-3 h-3 bg-pink opacity-18 animate-pulse" style={{ animationDuration: '2.9s', animationDelay: '0.4s' }} />
-          <div className="absolute top-[78%] left-[4%] w-2 h-2 bg-blue opacity-15 animate-pulse" style={{ animationDuration: '3.5s', animationDelay: '1.6s' }} />
-          <div className="absolute top-[92%] right-[5%] w-3 h-3 bg-violet-400 opacity-12 animate-pulse" style={{ animationDuration: '4.1s', animationDelay: '0.6s' }} />
+          <div className="absolute top-[5%] left-[6%] w-2 h-2 bg-blue opacity-18 animate-pulse" style={{ animationDuration: '3.6s' }} />
+          <div className="absolute top-[18%] right-[7%] w-3 h-3 bg-pink opacity-15 animate-pulse" style={{ animationDuration: '2.3s', animationDelay: '1.1s' }} />
+          <div className="absolute top-[38%] left-[2%] w-3 h-3 bg-cyan-400 opacity-14 animate-pulse" style={{ animationDuration: '4.2s', animationDelay: '0.6s' }} />
+          <div className="absolute top-[55%] right-[6%] w-2 h-2 bg-violet-400 opacity-16 animate-pulse" style={{ animationDuration: '2.7s', animationDelay: '1.4s' }} />
+          <div className="absolute top-[72%] left-[5%] w-3 h-3 bg-pink opacity-12 animate-pulse" style={{ animationDuration: '3.1s', animationDelay: '0.3s' }} />
+          <div className="absolute top-[88%] right-[4%] w-2 h-2 bg-blue opacity-20 animate-pulse" style={{ animationDuration: '3.8s', animationDelay: '0.9s' }} />
 
           <section id="about">
             <Description />

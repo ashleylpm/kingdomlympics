@@ -20,22 +20,22 @@ export const Hero: React.FC = () => {
     <section id="home" className="relative min-h-[80vh] flex flex-col items-center justify-center text-center px-4 pt-20 overflow-hidden">
       {/* Pixel Background Elements */}
       {[
-        { top: 7, left: 83, size: 3, color: 'bg-blue', opacity: 45, duration: 2.4 },
-        { top: 19, left: 11, size: 4, color: 'bg-pink', opacity: 35, duration: 1.8 },
-        { top: 12, left: 57, size: 2, color: 'bg-cyan-300', opacity: 50, duration: 3.1 },
-        { top: 31, left: 74, size: 3, color: 'bg-fuchsia-500', opacity: 30, duration: 2.7 },
-        { top: 26, left: 3, size: 5, color: 'bg-blue', opacity: 25, duration: 1.3 },
-        { top: 41, left: 91, size: 2, color: 'bg-pink', opacity: 55, duration: 3.6 },
-        { top: 37, left: 29, size: 4, color: 'bg-violet-400', opacity: 40, duration: 2.0 },
-        { top: 52, left: 67, size: 3, color: 'bg-blue', opacity: 35, duration: 1.6 },
-        { top: 59, left: 8, size: 2, color: 'bg-pink', opacity: 45, duration: 3.3 },
-        { top: 47, left: 44, size: 4, color: 'bg-purple-400', opacity: 30, duration: 2.9 },
-        { top: 66, left: 82, size: 3, color: 'bg-cyan-400', opacity: 40, duration: 1.5 },
-        { top: 72, left: 19, size: 5, color: 'bg-pink', opacity: 20, duration: 3.8 },
-        { top: 79, left: 53, size: 2, color: 'bg-blue', opacity: 50, duration: 2.2 },
-        { top: 85, left: 36, size: 3, color: 'bg-fuchsia-400', opacity: 35, duration: 1.9 },
-        { top: 91, left: 71, size: 4, color: 'bg-blue', opacity: 30, duration: 3.4 },
-        { top: 4, left: 39, size: 2, color: 'bg-pink', opacity: 45, duration: 2.6 },
+        { top: 5, left: 76, size: 3, color: 'bg-pink', opacity: 40, duration: 2.8 },
+        { top: 14, left: 18, size: 5, color: 'bg-blue', opacity: 30, duration: 3.5 },
+        { top: 9, left: 48, size: 2, color: 'bg-cyan-300', opacity: 45, duration: 2.1 },
+        { top: 28, left: 88, size: 6, color: 'bg-fuchsia-500', opacity: 25, duration: 3.2 },
+        { top: 22, left: 6, size: 3, color: 'bg-blue', opacity: 35, duration: 1.7 },
+        { top: 38, left: 62, size: 2, color: 'bg-pink', opacity: 50, duration: 3.9 },
+        { top: 34, left: 35, size: 5, color: 'bg-violet-400', opacity: 30, duration: 2.3 },
+        { top: 48, left: 93, size: 3, color: 'bg-blue', opacity: 40, duration: 1.9 },
+        { top: 55, left: 15, size: 6, color: 'bg-pink', opacity: 35, duration: 3.1 },
+        { top: 44, left: 52, size: 3, color: 'bg-purple-400', opacity: 25, duration: 2.6 },
+        { top: 63, left: 71, size: 4, color: 'bg-cyan-400', opacity: 45, duration: 1.4 },
+        { top: 70, left: 27, size: 3, color: 'bg-pink', opacity: 20, duration: 3.7 },
+        { top: 77, left: 84, size: 2, color: 'bg-blue', opacity: 40, duration: 2.5 },
+        { top: 83, left: 42, size: 5, color: 'bg-fuchsia-400', opacity: 30, duration: 1.6 },
+        { top: 90, left: 9, size: 4, color: 'bg-blue', opacity: 35, duration: 3.3 },
+        { top: 3, left: 55, size: 3, color: 'bg-pink', opacity: 40, duration: 2.9 },
       ].map((p, i) => (
         <div
           key={i}
