@@ -44,15 +44,15 @@ export const Countdown: React.FC = () => {
   );
 
   return (
-    <div className="py-12">
-      <div className="text-center mt-18 mb-8">
+    <div className="py-8 md:py-12 px-4 max-w-6xl mx-auto">
+      <div className="text-center mb-4">
         <h2 className="text-lg md:text-2xl font-bold mb-4 leading-relaxed">
           Countdown to{' '}
           <span className="pixel-text text-lg md:text-2xl">KINGDOMLYMPICS 2026</span>
         </h2>
       </div>
 
-      <div className="flex justify-center items-start space-x-3 md:space-x-6">
+      <div className="flex justify-center items-start space-x-1 md:space-x-3">
         <TimeBlock value={duration.days} label="Days" />
         <div className="text-2xl text-blue/40 mt-4 md:mt-6 font-display pixel-blink">:</div>
         <TimeBlock value={duration.hours} label="Hours" />

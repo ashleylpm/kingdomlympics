@@ -49,9 +49,6 @@ export default function App() {
           <div className="absolute top-[78%] left-[4%] w-2 h-2 bg-blue opacity-15 animate-pulse" style={{ animationDuration: '3.5s', animationDelay: '1.6s' }} />
           <div className="absolute top-[92%] right-[5%] w-3 h-3 bg-violet-400 opacity-12 animate-pulse" style={{ animationDuration: '4.1s', animationDelay: '0.6s' }} />
 
-          <section id="countdown">
-            <Countdown />
-          </section>
           <section id="about">
             <Description />
           </section>
@@ -60,6 +57,9 @@ export default function App() {
           </section>
           <section id="timeline">
             <Timeline />
+          </section>
+          <section id="countdown">
+            <Countdown />
           </section>
           <section id="leaderboard">
             <LeaderboardPreview />

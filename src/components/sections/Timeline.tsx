@@ -38,7 +38,7 @@ export const Timeline: React.FC = () => {
   ];
 
   return (
-    <section className="py-12 md:py-18 px-4 max-w-6xl mx-auto relative overflow-hidden">
+    <section className="py-8 md:py-12 px-4 max-w-6xl mx-auto relative overflow-hidden">
       {/* Pixel squares */}
       <div className="absolute top-[10%] right-[4%] w-3 h-3 bg-pink opacity-18 animate-pulse" style={{ animationDuration: '2.8s' }} />
       <div className="absolute top-[35%] left-[3%] w-2 h-2 bg-blue opacity-20 animate-pulse" style={{ animationDuration: '3.4s', animationDelay: '0.5s' }} />
@@ -50,7 +50,7 @@ export const Timeline: React.FC = () => {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.8 }}
-        className="text-center mb-16"
+        className="text-center mb-8"
       >
         <Badge icon={<Icon icon="pixelarticons:calendar" width={14} />} className="mb-6">
           TIMELINE

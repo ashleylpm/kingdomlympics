@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 
 export const LeaderboardPreview: React.FC = () => {
   return (
-    <section className="py-24 px-4 max-w-4xl mx-auto text-center">
+    <section className="py-8 md:py-12 px-4 max-w-4xl mx-auto text-center">
       <div className="pixel-card p-12 border-dashed border-2 border-white/10 opacity-50">
         <div className="inline-flex items-center justify-center w-16 h-16 border-2 border-blue/30 mb-6">
           <Icon icon="pixelarticons:lock" width={24} className="text-blue/40" />
@@ -14,7 +14,7 @@ export const LeaderboardPreview: React.FC = () => {
           The arena is being prepared. Team standings and live scores will be available once the games begin.
         </p>
 
-        <div className="mt-12 space-y-4 max-w-sm mx-auto">
+        <div className="mt-6 space-y-4 max-w-sm mx-auto">
           {[1, 2, 3].map((i) => (
             <div key={i} className="h-10 bg-blue/5 border-2 border-blue/10 animate-pulse" />
           ))}

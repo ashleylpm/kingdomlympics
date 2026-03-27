@@ -6,13 +6,13 @@ import { Badge } from '../ui/Badge';
 export const Description: React.FC = () => {
 
   return (
-    <section className="py-12 md:py-18 px-4 max-w-6xl mx-auto">
+    <section className="py-8 md:py-12 px-4 max-w-6xl mx-auto">
       <motion.div
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.8 }}
-        className="text-center mb-16"
+        className="text-center"
       >
         <Badge icon={<Icon icon="pixelarticons:question" width={14} />} className="mb-6">
           WHAT IS KINGDOMLYMPICS?
@@ -42,7 +42,7 @@ export const Description: React.FC = () => {
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="text-xl md:text-2xl font-display text-white mb-8 leading-relaxed md:whitespace-nowrap"
+            className="text-xl md:text-2xl font-display text-white leading-relaxed md:whitespace-nowrap"
           >
             Are you ready to write the next chapter?
             <span className="pixel-blink text-pink">_</span>
