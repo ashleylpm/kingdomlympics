@@ -44,7 +44,7 @@ export const Countdown: React.FC = () => {
   );
 
   return (
-    <div className="py-8 md:py-12 px-4 max-w-6xl mx-auto">
+    <div className="py-4 md:py-8 px-4 max-w-6xl mx-auto">
       <div className="text-center mb-4">
         <h2 className="text-lg md:text-2xl font-bold mb-4 leading-relaxed">
           Countdown to{' '}

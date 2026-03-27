@@ -26,7 +26,7 @@ export const EventDetails: React.FC = () => {
   ];
 
   return (
-    <section className="py-8 md:py-12 px-4 max-w-6xl mx-auto">
+    <section className="py-4 md:py-8 px-4 max-w-6xl mx-auto">
       <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
         {details.map((item, index) => (
           <div key={index} className="pixel-card p-6 flex flex-col items-center text-center">

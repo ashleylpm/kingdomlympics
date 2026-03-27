@@ -6,7 +6,7 @@ import { Badge } from '../ui/Badge';
 export const Description: React.FC = () => {
 
   return (
-    <section className="py-8 md:py-12 px-4 max-w-6xl mx-auto">
+    <section className="py-4 md:py-8 px-4 max-w-6xl mx-auto">
       <motion.div
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
