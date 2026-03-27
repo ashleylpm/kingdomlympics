@@ -24,7 +24,7 @@ export const Timeline: React.FC = () => {
   });
 
   return (
-    <section className="py-4 md:py-8 px-4 max-w-6xl mx-auto relative overflow-hidden">
+    <section className="py-6 md:py-8 px-4 max-w-6xl mx-auto relative overflow-hidden">
       {/* Pixel squares */}
       <div className="absolute top-[7%] right-[6%] w-2 h-2 bg-blue opacity-20 animate-pulse" style={{ animationDuration: '3.1s' }} />
       <div className="absolute top-[28%] left-[5%] w-3 h-3 bg-pink opacity-15 animate-pulse" style={{ animationDuration: '2.5s', animationDelay: '0.8s' }} />

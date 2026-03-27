@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 
 export const LeaderboardPreview: React.FC = () => {
   return (
-    <section className="py-4 md:py-8 px-4 max-w-4xl mx-auto text-center">
+    <section className="py-6 md:py-8 px-4 max-w-4xl mx-auto text-center">
       <div className="pixel-card p-12 border-dashed border-2 border-white/10 opacity-50">
         <div className="inline-flex items-center justify-center w-16 h-16 border-2 border-blue/30 mb-6">
           <Icon icon="pixelarticons:lock" width={24} className="text-blue/40" />
