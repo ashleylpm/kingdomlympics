@@ -10,11 +10,11 @@ export const Timeline: React.FC = () => {
   };
 
   const keyEvents = [
-    { date: "25", month: "APR", title: "Battle Game 1", isFinale: false },
-    { date: "30", month: "MAY", title: "Battle Game 2", isFinale: false },
-    { date: "27", month: "JUN", title: "Battle Game 3", isFinale: false },
-    { date: "25", month: "JUL", title: "Battle Game 4", isFinale: false },
-    { date: "23", month: "AUG", title: "GRAND FINALE", isFinale: true },
+    { date: "25", month: "APR", title: "Battle Game 1", subtitle: "Catapult Conflict", isFinale: false },
+    { date: "30", month: "MAY", title: "Battle Game 2", subtitle: null, isFinale: false },
+    { date: "27", month: "JUN", title: "Battle Game 3", subtitle: null, isFinale: false },
+    { date: "25", month: "JUL", title: "Battle Game 4", subtitle: null, isFinale: false },
+    { date: "23", month: "AUG", title: "GRAND FINALE", subtitle: null, isFinale: true },
   ];
 
   const now = new Date();
@@ -117,6 +117,11 @@ export const Timeline: React.FC = () => {
                 }`}>
                   {event.title}
                 </h3>
+                {event.subtitle && (
+                  <p className="text-xs text-white/50 font-accent mt-1 uppercase tracking-wider">
+                    {event.subtitle}
+                  </p>
+                )}
               </div>
             </div>
           </motion.div>

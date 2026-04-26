@@ -3,12 +3,11 @@ import { Trophy, Medal, ArrowLeft } from 'lucide-react';
 import { motion } from 'motion/react';
 
 const teams = [
-  { rank: 1, name: 'Team Alpha', points: 2450, color: 'from-yellow-400 to-amber-500' },
-  { rank: 2, name: 'Team Beta', points: 2200, color: 'from-gray-300 to-gray-400' },
-  { rank: 3, name: 'Team Gamma', points: 1980, color: 'from-amber-600 to-amber-700' },
-  { rank: 4, name: 'Team Delta', points: 1750, color: 'from-blue/50 to-blue' },
-  { rank: 5, name: 'Team Epsilon', points: 1620, color: 'from-pink/50 to-pink' },
-  { rank: 6, name: 'Team Zeta', points: 1480, color: 'from-purple-400 to-purple-600' },
+  { rank: 1, name: 'Tangentz', points: 735.5, color: 'from-yellow-400 to-amber-500' },
+  { rank: 2, name: 'Shrekgen', points: 620.5, color: 'from-gray-300 to-gray-400' },
+  { rank: 3, name: 'Agentz', points: 525, color: 'from-amber-600 to-amber-700' },
+  { rank: 4, name: '7-11', points: 245, color: 'from-blue/50 to-blue' },
+  { rank: 5, name: 'Genprix', points: 210, color: 'from-pink/50 to-pink' },
 ];
 
 export default function Leaderboard() {
@@ -82,7 +81,7 @@ export default function Leaderboard() {
             >
               <ArrowLeft size={18} />
               Back to Home
-            </Link>
+            </Link>a
           </div>
         </motion.div>
       </main>

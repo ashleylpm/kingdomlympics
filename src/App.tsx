@@ -33,7 +33,7 @@ export default function App() {
           <a href="#home" className="hover:text-blue transition-none hover:underline decoration-4 underline-offset-4">Home</a>
           <a href="#about" className="hover:text-blue transition-none hover:underline decoration-4 underline-offset-4">About</a>
           <a href="#timeline" className="hover:text-blue transition-none hover:underline decoration-4 underline-offset-4">Timeline</a>
-          <a href="#countdown" className="hover:text-blue transition-none hover:underline decoration-4 underline-offset-4">Countdown</a>
+          <a href="#leaderboard" className="hover:text-blue transition-none hover:underline decoration-4 underline-offset-4">Leaderboard</a>
         </div>
       </nav>
 
