@@ -63,7 +63,7 @@ export const Hero: React.FC = () => {
 
         <div className="max-w-2xl mx-auto mb-8">
           <img
-            src="/logo.png"
+            src="/logo_colour.svg"
             alt="KINGDOMLYMPICS"
             className="w-full h-auto object-contain"
             style={{ imageRendering: 'auto' }}
