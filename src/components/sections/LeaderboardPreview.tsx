@@ -34,7 +34,7 @@ export const LeaderboardPreview: React.FC = () => {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.5 }}
-        className="pixel-card overflow-x-auto"
+        className="pixel-card overflow-x-auto overflow-y-hidden"
       >
         <table className="w-full text-left min-w-[640px]">
           <thead>
