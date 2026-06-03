@@ -57,6 +57,20 @@ Scattered pixel squares appear throughout the page as decorative elements (in Ap
 
 **Animations:** `motion` (framer-motion) for scroll-triggered fade-in animations and scroll progress bar.
 
+### Teams (Age Groups)
+
+Teams in `src/components/sections/LeaderboardPreview.tsx`, mapped by age group:
+
+| Age | Team Name       |
+|-----|-----------------|
+| 13  | Gen Prix        |
+| 14  | aGENTz          |
+| 15  | 7-11            |
+| 16  | 10th GEN Saintz |
+| 17  | ShrekGEN        |
+
+When updating scores, the user may refer to teams by age (e.g., "13" means Gen Prix).
+
 ### Static Assets
 
 Public assets in `/public/`: `logo.png`, `recap.mp4`, `logo-original.png`.

@@ -4,17 +4,24 @@ import { motion } from 'motion/react';
 
 const teams = [
   { name: '10th GEN Saintz', color: 'from-green-600 to-green-800', games: [1000, 1000, null, null, null] },
-  { name: 'aGENTz', color: 'from-yellow-400 to-yellow-600', games: [600, 800, null, null, null] },
+  { name: 'aGENTz', color: 'from-yellow-400 to-yellow-600', games: [600, 1000, null, null, null] },
   { name: 'ShrekGEN', color: 'from-purple-400 to-purple-600', games: [800, 600, null, null, null] },
   { name: 'Gen Prix', color: 'from-red-800 to-red-950', games: [400, 500, null, null, null] },
-  { name: '7-11', color: 'from-blue-800 to-blue-950', games: [500, 500, null, null, null] },
+  { name: '7-11', color: 'from-blue-800 to-blue-950', games: [500, 400, null, null, null] },
 ];
 
 const gameNames = ['Catapult Conflict', 'Time Heist', 'Mega Mind', 'Ultimate Reel', 'Grand Finale'];
 
-const rankedTeams = [...teams]
-  .map((t) => ({ ...t, total: t.games.reduce((a, b) => (a ?? 0) + (b ?? 0), 0) as number }))
-  .sort((a, b) => b.total - a.total);
+const rankedTeams = (() => {
+  const sorted = [...teams]
+    .map((t) => ({ ...t, total: t.games.reduce((a, b) => (a ?? 0) + (b ?? 0), 0) as number }))
+    .sort((a, b) => b.total - a.total);
+  const result: Array<{ name: string; color: string; games: (number | null)[]; total: number; rank: number }> = [];
+  for (let i = 0; i < sorted.length; i++) {
+    result.push({ ...sorted[i], rank: i > 0 && sorted[i].total === sorted[i - 1].total ? result[i - 1].rank : i + 1 });
+  }
+  return result;
+})();
 
 export const LeaderboardPreview: React.FC = () => {
   return (
@@ -53,14 +60,14 @@ export const LeaderboardPreview: React.FC = () => {
             {rankedTeams.map((team, index) => (
               <tr
                 key={team.name}
-                className={`border-b border-white/5 ${index === 0 ? 'bg-white/5' : 'hover:bg-white/5'} transition-colors`}
+                className={`border-b border-white/5 ${team.rank === 1 ? 'bg-white/5' : 'hover:bg-white/5'} transition-colors`}
               >
                 <td className="px-4 py-4">
                   <div className={`w-8 h-8 rounded-full bg-gradient-to-br ${team.color} flex items-center justify-center font-bold text-white text-sm`}>
-                    {index === 0 ? (
+                    {team.rank === 1 ? (
                       <Icon icon="pixelarticons:crown" width={18} />
                     ) : (
-                      <span>{index + 1}</span>
+                      <span>{team.rank}</span>
                     )}
                   </div>
                 </td>
