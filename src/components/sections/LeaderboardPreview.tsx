@@ -3,16 +3,22 @@ import { Icon } from '@iconify/react';
 import { motion } from 'motion/react';
 
 const teams = [
-  { rank: 1, name: '10th GEN Saintz', points: 1000, color: 'from-green-600 to-green-800' },
-  { rank: 2, name: 'ShrekGEN', points: 800, color: 'from-purple-400 to-purple-600' },
-  { rank: 3, name: 'aGENTz', points: 600, color: 'from-yellow-400 to-yellow-600' },
-  { rank: 4, name: '7-11', points: 500, color: 'from-blue-800 to-blue-950' },
-  { rank: 5, name: 'Gen Prix', points: 400, color: 'from-red-800 to-red-950' },
+  { name: '10th GEN Saintz', color: 'from-green-600 to-green-800', games: [1000, 1000, null, null, null] },
+  { name: 'aGENTz', color: 'from-yellow-400 to-yellow-600', games: [600, 800, null, null, null] },
+  { name: 'ShrekGEN', color: 'from-purple-400 to-purple-600', games: [800, 600, null, null, null] },
+  { name: 'Gen Prix', color: 'from-red-800 to-red-950', games: [400, 500, null, null, null] },
+  { name: '7-11', color: 'from-blue-800 to-blue-950', games: [500, 500, null, null, null] },
 ];
+
+const gameNames = ['Catapult Conflict', 'Time Heist', 'Mega Mind', 'Ultimate Reel', 'Grand Finale'];
+
+const rankedTeams = [...teams]
+  .map((t) => ({ ...t, total: t.games.reduce((a, b) => (a ?? 0) + (b ?? 0), 0) as number }))
+  .sort((a, b) => b.total - a.total);
 
 export const LeaderboardPreview: React.FC = () => {
   return (
-    <section className="py-6 md:py-8 px-4 max-w-4xl mx-auto">
+    <section className="py-6 md:py-8 px-4 max-w-6xl mx-auto">
       <div className="text-center mb-8">
         <div className="gradient-box inline-flex items-center gap-2 px-4 py-2 rounded-full mb-6">
           <Icon icon="pixelarticons:trophy" width={16} className="text-white" />
@@ -23,35 +29,53 @@ export const LeaderboardPreview: React.FC = () => {
         </p>
       </div>
 
-      <div className="space-y-4">
-        {teams.map((team, index) => (
-          <motion.div
-            key={team.rank}
-            initial={{ opacity: 0, x: -20 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.4, delay: index * 0.1 }}
-            className="pixel-card p-4 md:p-6 flex items-center gap-4"
-          >
-            <div className={`w-12 h-12 rounded-full bg-gradient-to-br ${team.color} flex items-center justify-center font-bold text-white`}>
-              {team.rank === 1 ? (
-                <Icon icon="pixelarticons:crown" width={24} />
-              ) : (
-                <span>{team.rank}</span>
-              )}
-            </div>
-
-            <div className="flex-1">
-              <h3 className="font-bold text-lg">{team.name}</h3>
-            </div>
-
-            <div className="text-right">
-              <p className="font-display font-bold text-2xl">{team.points.toLocaleString()}</p>
-              <p className="text-white/40 text-sm">points</p>
-            </div>
-          </motion.div>
-        ))}
-      </div>
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.5 }}
+        className="pixel-card overflow-x-auto"
+      >
+        <table className="w-full text-left min-w-[640px]">
+          <thead>
+            <tr className="border-b-2 border-blue/20">
+              <th className="px-4 py-3 text-[10px] font-display uppercase tracking-widest text-white/60">#</th>
+              <th className="px-4 py-3 text-[10px] font-display uppercase tracking-widest text-white/60">Team</th>
+              <th className="px-4 py-3 text-[10px] font-display uppercase tracking-widest text-pink text-center md:hidden">Total</th>
+              {gameNames.map((name) => (
+                <th key={name} className="px-4 py-3 text-[10px] font-display uppercase tracking-widest text-white/60 text-center">{name}</th>
+              ))}
+              <th className="px-4 py-3 text-[10px] font-display uppercase tracking-widest text-pink text-center hidden md:table-cell">Total</th>
+            </tr>
+          </thead>
+          <tbody>
+            {rankedTeams.map((team, index) => (
+              <tr
+                key={team.name}
+                className={`border-b border-white/5 ${index === 0 ? 'bg-white/5' : 'hover:bg-white/5'} transition-colors`}
+              >
+                <td className="px-4 py-4">
+                  <div className={`w-8 h-8 rounded-full bg-gradient-to-br ${team.color} flex items-center justify-center font-bold text-white text-sm`}>
+                    {index === 0 ? (
+                      <Icon icon="pixelarticons:crown" width={18} />
+                    ) : (
+                      <span>{index + 1}</span>
+                    )}
+                  </div>
+                </td>
+                <td className="px-4 py-4 font-bold text-sm md:text-base whitespace-nowrap">{team.name}</td>
+                <td className="px-4 py-4 text-center font-display font-bold text-lg text-pink md:hidden">{team.total.toLocaleString()}</td>
+                {team.games.map((score, i) => (
+                  <td key={i} className="px-4 py-4 text-center text-white font-accent font-semibold">
+                    {score !== null ? score.toLocaleString() : '—'}
+                  </td>
+                ))}
+                <td className="px-4 py-4 text-center font-display font-bold text-lg text-pink hidden md:table-cell">{team.total.toLocaleString()}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </motion.div>
     </section>
   );
 };

@@ -29,11 +29,12 @@ export default function App() {
             <span className="pixel-text-sm text-[10px] md:text-sm">KINGDOMLYMPICS</span>
           </a>
         </div>
-        <div className="hidden md:flex space-x-8 text-[10px] font-bold uppercase tracking-widest text-white/60">
+        <div className="hidden md:flex items-center space-x-8 text-[10px] font-bold uppercase tracking-widest text-white/60">
           <a href="#home" className="hover:text-blue transition-none hover:underline decoration-4 underline-offset-4">Home</a>
           <a href="#about" className="hover:text-blue transition-none hover:underline decoration-4 underline-offset-4">About</a>
           <a href="#timeline" className="hover:text-blue transition-none hover:underline decoration-4 underline-offset-4">Timeline</a>
           <a href="#leaderboard" className="hover:text-blue transition-none hover:underline decoration-4 underline-offset-4">Leaderboard</a>
+          <a href="https://tinyurl.com/KO26FINALE" target="_blank" rel="noopener noreferrer" className="hover:text-blue transition-none hover:underline decoration-4 underline-offset-4">Sign Up</a>
         </div>
       </nav>
 

@@ -73,6 +73,16 @@ export const Hero: React.FC = () => {
           />
         </div>
 
+        {/* Sign Up Button */}
+        <a
+          href="https://tinyurl.com/KO26FINALE"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="pixel-btn inline-flex items-center gap-2 px-8 py-4 mb-8 font-display text-sm uppercase tracking-widest bg-pink text-white border-2 border-pink hover:bg-pink/80 transition-colors"
+        >
+          Sign Up Now
+        </a>
+
         {/* Recap Video */}
         <motion.div
           whileHover={!isPlaying ? { scale: 1.02 } : {}}

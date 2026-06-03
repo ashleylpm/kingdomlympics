@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import { motion } from 'motion/react';
 
 // Create event date more explicitly for Malaysia timezone
 const EVENT_DATE = new Date(2026, 7, 23, 9, 0, 0); // Month is 0-indexed, so 7 = August
@@ -44,7 +43,7 @@ export const Countdown: React.FC = () => {
   );
 
   return (
-    <div className="py-6 md:py-8 px-4 max-w-6xl mx-auto">
+    <div className="py-12 md:py-16 px-4 max-w-6xl mx-auto">
       <div className="text-center mb-4">
         <h2 className="text-lg md:text-2xl font-bold mb-4 leading-relaxed">
           Countdown to{' '}
@@ -60,6 +59,17 @@ export const Countdown: React.FC = () => {
         <TimeBlock value={duration.minutes} label="Mins" />
         <div className="text-2xl text-blue/40 mt-4 md:mt-6 font-display pixel-blink">:</div>
         <TimeBlock value={duration.seconds} label="Secs" />
+      </div>
+
+      <div className="text-center mt-8">
+        <a
+          href="https://tinyurl.com/KO26FINALE"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="pixel-btn inline-flex items-center gap-2 px-8 py-4 font-display text-sm uppercase tracking-widest bg-pink text-white border-2 border-pink"
+        >
+          Sign Up Now
+        </a>
       </div>
     </div>
   );
