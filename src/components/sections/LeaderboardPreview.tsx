@@ -34,9 +34,10 @@ export const LeaderboardPreview: React.FC = () => {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.5 }}
-        className="pixel-card overflow-x-auto overflow-y-hidden"
+        className="pixel-card"
       >
-        <table className="w-full text-left min-w-[640px]">
+        <div className="overflow-x-auto md:overflow-x-visible overflow-y-hidden">
+        <table className="w-full text-left min-w-[640px] md:min-w-0">
           <thead>
             <tr className="border-b-2 border-blue/20">
               <th className="px-4 py-3 text-[10px] font-display uppercase tracking-widest text-white/60">#</th>
@@ -75,6 +76,7 @@ export const LeaderboardPreview: React.FC = () => {
             ))}
           </tbody>
         </table>
+        </div>
       </motion.div>
     </section>
   );
