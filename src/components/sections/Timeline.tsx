@@ -13,7 +13,7 @@ export const Timeline: React.FC = () => {
     { date: "25", month: "APR", title: "Battle Game 1", subtitle: "Catapult Conflict", isFinale: false },
     { date: "30", month: "MAY", title: "Battle Game 2", subtitle: "Time Heist", isFinale: false },
     { date: "27", month: "JUN", title: "Battle Game 3", subtitle: "Mega Mind", isFinale: false },
-    { date: "25", month: "JUL", title: "Battle Game 4", subtitle: "Ultimate Reel", isFinale: false },
+    { date: "18", month: "JUL", title: "Battle Game 4", subtitle: "Ultimate Reel", isFinale: false },
     { date: "23", month: "AUG", title: "GRAND FINALE", subtitle: null, isFinale: true },
   ];
 
