@@ -3,11 +3,11 @@ import { Icon } from '@iconify/react';
 import { motion } from 'motion/react';
 
 const teams = [
-  { name: '10th GEN Saintz', color: 'from-green-600 to-green-800', games: [1000, 1000, 850, null, null] },
-  { name: 'aGENTz', color: 'from-yellow-400 to-yellow-600', games: [600, 1000, 500, null, null] },
-  { name: 'ShrekGEN', color: 'from-purple-400 to-purple-600', games: [800, 600, 500, null, null] },
-  { name: 'Gen Prix', color: 'from-red-800 to-red-950', games: [400, 500, 600, null, null] },
-  { name: '7-11', color: 'from-blue-800 to-blue-950', games: [500, 400, 1000, null, null] },
+  { name: 'Gen Prix', color: 'from-red-800 to-red-950', games: [400, 500, 600, 800, null] },
+  { name: 'aGENTz', color: 'from-yellow-400 to-yellow-600', games: [600, 1000, 500, 400, null] },
+  { name: '7-11', color: 'from-blue-800 to-blue-950', games: [500, 400, 1000, 1000, null] },
+  { name: '10th GEN Saintz', color: 'from-green-600 to-green-800', games: [1000, 1000, 850, 500, null] },
+  { name: 'ShrekGEN', color: 'from-purple-400 to-purple-600', games: [800, 600, 500, 600, null] },
 ];
 
 const gameNames = ['Catapult Conflict', 'Time Heist', 'Mega Mind', 'Ultimate Reel', 'Grand Finale'];
