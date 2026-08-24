@@ -62,14 +62,19 @@ export const Countdown: React.FC = () => {
       </div>
 
       <div className="text-center mt-8">
-        <a
+        {/* <a
           href="https://tinyurl.com/KO26FINALE"
           target="_blank"
           rel="noopener noreferrer"
           className="pixel-btn inline-flex items-center gap-2 px-8 py-4 font-display text-sm uppercase tracking-widest bg-pink text-white border-2 border-pink"
         >
           Sign Up Now
-        </a>
+        </a> */}
+        <p className="text-white/50 text-sm font-accent">
+          Event has concluded. Congrats 10th GEN Saintz for winning KINGDOMLYMPICS 2026!
+          <br/>
+          Thank you to all volunteers & participants in making this event a success.
+        </p>
       </div>
     </div>
   );

@@ -73,7 +73,7 @@ export const Hero: React.FC = () => {
           />
         </div>
 
-        {/* Sign Up Button */}
+        {/* Sign Up Button
         <a
           href="https://tinyurl.com/KO26FINALE"
           target="_blank"
@@ -81,7 +81,18 @@ export const Hero: React.FC = () => {
           className="pixel-btn inline-flex items-center gap-2 px-8 py-4 mb-8 font-display text-sm uppercase tracking-widest bg-pink text-white border-2 border-pink hover:bg-pink/80 transition-colors"
         >
           Sign Up Now
-        </a>
+        </a> */}
+
+        {/* Champions Banner */}
+        <div className="gradient-box inline-flex flex-col items-center gap-2 px-8 py-4 mb-8">
+          <div className="flex items-center gap-2">
+            <Icon icon="pixelarticons:crown" width={18} className="text-white" />
+            <span className="font-display text-[10px] uppercase tracking-widest text-white">2026 Champions</span>
+            <Icon icon="pixelarticons:crown" width={18} className="text-white" />
+          </div>
+          <span className="font-display text-base md:text-lg text-white pixel-text">10th GEN Saintz</span>
+          <span className="text-white/70 text-xs font-accent">2x Kingdomlympics Champions</span>
+        </div>
 
         {/* Recap Video */}
         <motion.div

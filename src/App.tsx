@@ -34,7 +34,7 @@ export default function App() {
           <a href="#about" className="hover:text-blue transition-none hover:underline decoration-4 underline-offset-4">About</a>
           <a href="#timeline" className="hover:text-blue transition-none hover:underline decoration-4 underline-offset-4">Timeline</a>
           <a href="#leaderboard" className="hover:text-blue transition-none hover:underline decoration-4 underline-offset-4">Leaderboard</a>
-          <a href="https://tinyurl.com/KO26FINALE" target="_blank" rel="noopener noreferrer" className="hover:text-blue transition-none hover:underline decoration-4 underline-offset-4">Sign Up</a>
+          {/* <a href="https://tinyurl.com/KO26FINALE" target="_blank" rel="noopener noreferrer" className="hover:text-blue transition-none hover:underline decoration-4 underline-offset-4">Sign Up</a> */}
         </div>
       </nav>
 
